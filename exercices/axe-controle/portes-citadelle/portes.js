@@ -40,8 +40,8 @@ export function zoneName(code) {
 export function alertLevel(energy) {
   let text
   if (energy < 20)text = "CRITIQUE"
-  else if(energy >= 20 || energy < 49)text = "FAIBLE"
-  else if(energy >= 50)text = "STABLE"
-  else if(code == "SO")text = "OPTIMAL"
+  else if(energy >= 20 && energy <= 49)text = "FAIBLE"
+  else if(energy >= 50 && energy <= 79)text = "STABLE"
+  else text = "OPTIMAL"
   return text
 }
